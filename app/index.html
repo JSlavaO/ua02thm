@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <title>ActiveBox</title>
+  <style>
+    .intro.box.no-webp {
+      background: url("./dist/images/bg_top.jpg") center center / cover no-repeat #CED9DD;
+    }
+    .intro.box.webp {
+      background: url("./dist/images/bg_top.webp") center center / cover no-repeat #CED9DD;
+    }
+    .equip_svg-wrapp.box.webp {
+      background-image: url("/dist/images/bgequip.webp");
+      background-repeat: no-repeat;
+      background-size: 100% 80%;
+    }
+    .equip_svg-wrapp.box.no-webp {
+      background: url("/dist/images/bgequip.png") 100% 80% / cover no-repeat;
+    }
+  </style>
+  <link href="./dist/css/main.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+  <div class="container c-width">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="#" class="nav__link">
+          <picture>
+            <source
+              srcset="/dist/images/logotop.webp"
+              type="image/webp"
+              class="feat_icon"
+            />
+            <source
+              srcset="/dist/images/logotop.png"
+              type="image/png"
+              class="feat_icon"
+            />
+            <img src="/dist/images/logotop.png" alt="" class="feat_icon" />
+          </picture>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav__link" data-content="gos" data-cl="mainpage">Main page</a>
+        <a href="#" class="nav__link" data-content="gos" data-cl="company">Company</a>
+        <a href="#" class="nav__link" data-content="gos" data-cl="section4" >Section4</a>
+        <a href="#" class="nav__link" data-content="gos" data-cl="slider-1" >Equipment</a>
+        <a href="#" class="nav__link" data-content="gos" data-cl="contacts" >Contacts</a>
+      </nav>
+      <div class="header__mob">
+        <div>
+          <a href="#" class="nav__linksvg">
+            <svg width="14px" height="14px" data-content="btnnew" data-cl="callback" data-cltittle="REQUEST A CALL" data-clfrom="Send Form From Top" data-clbtn="Request">
+              <use xlink:href="/dist/svg/icons.svg#smartphone"></use>
+            </svg><span class="header__mob-phone" data-content="btnnew" data-cl="callback" data-cltittle="REQUEST A CALL" data-clbtn="Request"> +1 (123) 123-4444</span>
+          </a>
+        </div>
+        <div class="header__mob-requst">
+          <a
+            href="#"
+            class="header__btn"
+            data-content="btnnew"
+            data-cl="callback"
+            data-cltittle="REQUEST A CALL"
+            data-clbtn="Request"
+            >Request the call back</a  
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="menubartest" class="menubartest"></div>
+<div id="menubarhead"></div>
+
+<!-- ./ header -->
+
+  <!-- intro intro__inner--h2e _anim-items _anim-nohide |  intro__subtittle _anim-show -->
+  <section class="intro box" id="mainpage">
+    <div class="intro_top">
+      <div class="intro_top-left">
+        <div class="intro__left-info">
+          <div class="intro__left-info-top">
+            <div class="intro__inner--h1 _anim-items _anim-nohide">
+              <h1 class="intro__tittle _anim-show">
+                Header text. Change it as You want.
+              </h1>
+            </div>
+          </div>
+          <div class="intro__left-info-bott">
+            <div class="intro__inner--h2e _anim-items _anim-nohide">
+              <h2 class="intro__subtittle _anim-show">
+                <span class="intro__subtittle-item">
+                  <svg width="15px" height="15px">
+                    <use xlink:href="/dist/svg/icons.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="intro__subtittle-item">
+                  CHANGE DESIGN FROM WORDPRESS
+                </span>
+              </h2>
+              <h2 class="intro__subtittle _anim-show">
+                <span class="intro__subtittle-item">
+                  <svg width="15px" height="15px">
+                    <use xlink:href="/dist/svg/icons.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="intro__subtittle-item">
+                  SEE VIDEO HELP FOR INSTRUCTION
+                </span>
+
+              </h2>
+              <h2 class="intro__subtittle _anim-show">
+                <span class="intro__subtittle-item">
+                  <svg width="15px" height="15px">
+                    <use xlink:href="/dist/svg/icons.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="intro__subtittle-item">
+                  ORDER YOUR OWN DESIGN
+                </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="intro__inner--a _anim-items _anim-nohide">
+          <a href="#" class="btn btn_intro--left _anim-show" data-content="btnnew" data-cl="tabs" data-cltitle="Login and Discover">DISCOVER</a>
+        </div>
+      </div>
+      <div class="intro_top-right">
+        <picture>
+          <source srcset="/dist/images/main_img.webp" type="image/webp" class="feat_icon" />
+          <source srcset="/dist/images/main_im.png" type="image/png" class="feat_icon feat_main" />
+          <img src="/dist/images/main_im.png" alt="" class="feat_icon feat_main" />
+        </picture>
+      </div>
+    </div>
+    <div class="intro_bott">
+      <div class="intro_bott_all _anim-items _anim-nohide">
+        <div class="intro_bott-sect _anim-show">
+          <div class="intro_bott-numb">
+            <span class="intro_bott-n">5</span><span class="intro_bott-t"> Sectio 1.</span>
+          </div>
+          <div class="intro_bott-txt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+        <div class="intro_bott-sect _anim-show">
+          <div class="intro_bott-numb">
+            <span class="intro_bott-n">125</span><span class="intro_bott-t"> Amet.</span>
+          </div>
+          <div class="intro_bott-txt">
+            Nulla suscipit. Maiores quisquam.
+          </div>
+        </div>
+        <div class="intro_bott-sect _anim-show">
+          <div class="intro_bott-numb">
+            <span class="intro_bott-n">150</span><span class="intro_bott-t"> Sunt.</span>
+          </div>
+          <div class="intro_bott-txt">
+            Praesentium incidunt sunt nam!
+          </div>
+        </div>
+        <div class="intro_bott-sect _anim-show">
+          <div class="intro_bott-numb">
+            <span class="intro_bott-n">255 000</span><span class="intro_bott-t"> Mete.</span>
+          </div>
+          <div class="intro_bott-txt">
+            Autem laudantium mollitia, minima sequi harum ut.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-up">
+      <svg class="scroll-up__svg">
+        <path class="scroll-up__svg-path" d="
+          M24,2 
+          a22 22 0 0 1 2 46
+          a22 22 0 0 1 -2 -46
+        " />
+      </svg>
+    </div>
+  </section>
+  <script src="./dist/js/modernizr-custom.js"></script>
+  <script>
+    Modernizr.on("webp", function(result) {
+      let webp = document.querySelector(".intro.box");
+      if (result) {
+        webp.classList.add("webp");
+      } else {
+        webp.classList.add("no-webp");
+      }
+    });
+  </script>
+  <!-- ./intro  -->
+  <!-- 1-> 2,3,4,5  -->
+  <!-- 2-> 8,9,6,7  -->
+  <!-- 3-> 13,11,10,12  -->
+  <!-- 4-> 14,15,16  -->
+
+  <div class="content c-gallery">
+    <div class="gallery _anim-items _anim-nohide">
+      <div class="gallery_left _anim-show">
+        <picture class="feat_img">
+          <source srcset="/dist/images/gallery0.webp" type="image/webp" />
+          <source srcset="/dist/images/gallery0.jpg" type="image/jpg" />
+          <img src="/dist/images/gallery0.jpg" alt="" class="feat_icon" />
+        </picture>
+        <div class="gallery_left-info">
+          <div class="gallery_left-title">
+            <svg width="48px" height="48px" class="gallery_left-title">
+              <use xlink:href="/dist/svg/icons.svg#svgcirclearrow" data-content="btnnew" data-cl="gallery" data-cgdir="/dist/images/" data-cgimg="gallery0,gallery1,gallery2,gallery3" data-cgsvg="./dist/svg/"></use>
+            </svg>
+          </div>
+          <div class="gallery_left-text" data-content="btnnew" data-cl="gallery" data-cgdir="/dist/images/" data-cgimg="gallery0,gallery1,gallery2,gallery3" data-cgsvg="./dist/svg/">Gallery</div>
+        </div>
+        <div class="gallery_left-svg">
+          <svg class="accordion__btn-t" width="85px" height="85px">
+            <use xlink:href="/dist/svg/icons.svg#triangle"></use>
+          </svg>
+        </div>
+        <div class="gallery_left-svgimg">
+          <svg class="accordion__btn-t" width="20px" height="20px">
+            <use xlink:href="/dist/svg/icons.svg#svgimg"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="gallery_right _anim-show">
+        <div class="gallery_h2">
+          Section 2. Change title of gallery from Wordpress.
+        </div>
+        <div class="gallery_txt">
+          Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>. Illo earum, saepe, doloribus
+          dignissimos error, magnam modi similique dicta ut quae eius placeat enim! Debitis, facere rerum, pariatur non
+          in alias.
+        </div>
+        <div class="gallery_adv">
+          <svg width="12px" height="12px">
+            <use xlink:href="/dist/svg/icons.svg#svgplus"></use>
+          </svg>
+          Advantage Descriptio1
+        </div>
+        <div class="gallery_adv">
+          <svg width="12px" height="12px">
+            <use xlink:href="/dist/svg/icons.svg#svgplus"></use>
+          </svg>
+          Advantage 2
+        </div>
+        <div class="gallery_btn">
+          <div class="gallery_btn-a">
+            <a href="#" class="btn btn_gall--left" data-content="btnnew" data-cl="tabs" data-cltitle="Login,..In Order to Order">Make Order
+            </a>
+          </div>
+          <div class="gallery_btn-b">
+            <a href="#" class="btn btn_gall--right" data-content="btnnew" data-cl="certyficates" data-cgdir="/dist/images/" data-cgimg="certificate01,certificate02,certificate03" data-cgsvg="./dist/svg/">Our Certificates
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content" id="company">
+    <div class="services--tittle _anim-items _anim-nohide">
+      <div class="services-anim _anim-show">
+        Section 3. Main services
+      </div>
+    </div>
+    <div class="services _anim-items _anim-nohide">
+      <div class="services__items _anim-show">
+        <div class="services-svg">
+          <svg class="services-svg" width="80px" height="80px">
+            <use xlink:href="/dist/svg/icons.svg#service10"></use>
+          </svg>
+        </div>
+        <div class="services-tittle">
+          Installation
+        </div>
+        <div class="services-txt">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem debitis nesciunt dolor beatae delectus
+          dolor beatae delectus dolor beatae delectus dolor beatae delectus.
+        </div>
+        <div class="services-btn">
+          <a href="#" class="services_a-btn" data-content="btnnew" data-cl="callback" data-cltittle="Order Install" data-clbtn="Order">Order Install
+          </a>
+        </div>
+      </div>
+      <div class="services__items _anim-show">
+        <div class="services-svg">
+          <svg class="services-svg" width="80px" height="80px">
+            <use xlink:href="/dist/svg/icons.svg#service09"></use>
+          </svg>
+        </div>
+        <div class="services-tittle">
+          Design
+        </div>
+        <div class="services-txt">
+          Lorem ipsum Ab dolorem debitis nesciunt dolor beatae delectus cumque sequi accusamus voluptatum, nihil fugiat,
+          consequatur ratione iusto!.
+        </div>
+        <div class="services-btn">
+          <a href="#" class="services_a-btn" data-content="btnnew" data-cl="callback" data-cltittle="Order Design" data-clbtn="Order">Order Design
+          </a>
+        </div>
+      </div>
+      <div class="services__items _anim-show">
+        <div class="services-svg">
+          <svg class="services-svg" width="80px" height="80px">
+            <use xlink:href="/dist/svg/icons.svg#service11"></use>
+          </svg>
+        </div>
+        <div class="services-tittle">
+          Equipment
+        </div>
+        <div class="services-txt">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt labore nobis.
+        </div>
+        <div class="services-btn">
+          <div class="services-link">
+            <a href="#" class="services_a-btn" data-content="btnnew" data-cl="callback" data-cltittle="Order Equipment" data-clbtn="Order">Order Equipment
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- works BUILDINS N1 (CHANGE THIS TITLE) -->
+  <div class="content" id="section4">
+    <div class="works--tittle _anim-items _anim-nohide">
+      <div class="works-anim _anim-show">
+        Section 4. Completed work
+      </div>
+    </div>
+    <div class="works">
+      <div class="works-items _anim-items _anim-nohide">
+        <div class="works0-items_anim _anim-show">
+          <picture>
+            <source srcset="/dist/images/works1.webp" type="image/webp" class="feat_icon" />
+            <source srcset="/dist/images/works1.jpg" type="image/jpg" class="feat_icon" />
+            <img src="/dist/images/works1.jpg" alt="" class="feat_icon" />
+          </picture>
+        </div>
+        <div class="works-info">
+          <div class="works-title">
+            <svg width="32px" height="32px" class="works-title">
+              <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works1" data-cgdir="/dist/images/" data-ttlimg="Building 1"></use>
+            </svg>
+          </div>
+          <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works1" data-cgdir="/dist/images/" data-ttlimg="Building 1">Building 1</div>
+          <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works1" data-cgdir="/dist/images/" data-ttlimg="Building 1">Go catalogue</div>
+        </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+        <div class="works1-items_anim _anim-show">
+          <picture>
+            <source srcset="/dist/images/works2.webp" type="image/webp" class="feat_icon" />
+            <source srcset="/dist/images/works2.jpg" type="image/jpg" class="feat_icon" />
+            <img src="/dist/images/works2.jpg" alt="" class="feat_icon" />
+          </picture>
+        </div>
+        <div class="works-info">
+          <div class="works-title">
+            <svg width="32px" height="32px" class="works-title">
+              <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works2" data-cgdir="/dist/images/" data-ttlimg="New Building 2"></use>
+            </svg>
+          </div>
+          <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works2" data-cgdir="/dist/images/" data-ttlimg="New Building 2">Building 2</div>
+          <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works2" data-cgdir="/dist/images/" data-ttlimg="New Building 2">Press and go </div>
+        </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+       <div class="works2-items_anim _anim-show">
+        <picture>
+         <source srcset="/dist/images/works3.webp" type="image/webp" class="feat_icon" />
+         <source srcset="/dist/images/works3.jpg" type="image/jpg" class="feat_icon" />
+         <img src="/dist/images/works3.jpg" alt="" class="feat_icon" />
+        </picture>
+       </div>
+       <div class="works-info">
+        <div class="works-title">
+         <svg width="32px" height="32px" class="works-title">
+          <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works3" data-cgdir="/dist/images/" data-ttlimg="Fine Building"></use>
+         </svg>
+        </div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works3" data-cgdir="/dist/images/" data-ttlimg="Fine Building">Building 3</div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works3" data-cgdir="/dist/images/" data-ttlimg="Fine Building">Press and Press </div>
+       </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+       <div class="works3-items_anim _anim-show">
+        <picture>
+         <source srcset="/dist/images/works4.webp" type="image/webp" class="feat_icon" />
+         <source srcset="/dist/images/works4.jpg" type="image/jpg" class="feat_icon" />
+         <img src="/dist/images/works4.jpg" alt="" class="feat_icon" />
+        </picture>
+       </div>
+       <div class="works-info">
+        <div class="works-title">
+         <svg width="32px" height="32px" class="works-title">
+          <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works4" data-cgdir="/dist/images/" data-ttlimg="Building 4 Rio"></use>
+         </svg>
+        </div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works4" data-cgdir="/dist/images/" data-ttlimg="Building 4 Rio">Building 4 Rio</div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works4" data-cgdir="/dist/images/" data-ttlimg="Building 4 Rio">Press and go 2Rio</div>
+       </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+       <div class="works4-items_anim _anim-show">
+        <picture>
+         <source srcset="/dist/images/works5.webp" type="image/webp" class="feat_icon" />
+         <source srcset="/dist/images/works5.jpg" type="image/jpg" class="feat_icon" />
+         <img src="/dist/images/works5.jpg" alt="" class="feat_icon" />
+        </picture>
+       </div>
+       <div class="works-info">
+        <div class="works-title">
+         <svg width="32px" height="32px" class="works-title">
+          <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works5" data-cgdir="/dist/images/" data-ttlimg="Building 5"></use>
+         </svg>
+        </div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works5" data-cgdir="/dist/images/" data-ttlimg="Building 5">Building 5</div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works5" data-cgdir="/dist/images/" data-ttlimg="Building 5">Go catalogue</div>
+       </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+       <div class="works5-items_anim _anim-show">
+        <picture>
+         <source srcset="/dist/images/works6.webp" type="image/webp" class="feat_icon" />
+         <source srcset="/dist/images/works6.jpg" type="image/jpg" class="feat_icon" />
+         <img src="/dist/images/works6.jpg" alt="" class="feat_icon" />
+        </picture>
+       </div>
+       <div class="works-info">
+        <div class="works-title">
+         <svg width="32px" height="32px" class="works-title">
+          <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works6" data-cgdir="/dist/images/" data-ttlimg="Building 6"></use>
+         </svg>
+        </div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works6" data-cgdir="/dist/images/" data-ttlimg="Building 6">Building 6</div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works6" data-cgdir="/dist/images/" data-ttlimg="Building 6">Press and go </div>
+       </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+       <div class="works6-items_anim _anim-show">
+        <picture>
+         <source srcset="/dist/images/works7.webp" type="image/webp" class="feat_icon" />
+         <source srcset="/dist/images/works7.jpg" type="image/jpg" class="feat_icon" />
+         <img src="/dist/images/works7.jpg" alt="" class="feat_icon" />
+        </picture>
+       </div>
+       <div class="works-info">
+        <div class="works-title">
+         <svg width="32px" height="32px" class="works-title">
+          <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works7" data-cgdir="/dist/images/" data-ttlimg="Building 7"></use>
+         </svg>
+        </div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works7" data-cgdir="/dist/images/" data-ttlimg="Building 7">Building 7</div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works7" data-cgdir="/dist/images/" data-ttlimg="Building 7">Press and Press </div>
+       </div>
+      </div>
+      <div class="works-items _anim-items _anim-nohide">
+       <div class="works7-items_anim _anim-show">
+        <picture>
+         <source srcset="/dist/images/works8.webp" type="image/webp" class="feat_icon" />
+         <source srcset="/dist/images/works8.jpg" type="image/jpg" class="feat_icon" />
+         <img src="/dist/images/works8.jpg" alt="" class="feat_icon" />
+       </picture>
+       </div>
+       <div class="works-info">
+        <div class="works-title">
+          <svg width="32px" height="32px" class="works-title">
+           <use xlink:href="/dist/svg/icons.svg#svglupa" data-content="btnnew" data-cl="showimg" data-climg="works8" data-cgdir="/dist/images/" data-ttlimg="Building 8"></use>
+          </svg>
+        </div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works8" data-cgdir="/dist/images/" data-ttlimg="Building 8">Building 8</div>
+        <div class="works-text" data-content="btnnew" data-cl="showimg" data-climg="works8" data-cgdir="/dist/images/" data-ttlimg="Building 8">Press and go </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="content c-equip" id="slider-1">
+   <div class="equip--tittle _anim-items _anim-nohide">
+    <div class="equip-anim _anim-show">
+     Section 5. Supplied equipment
+    </div>
+   </div>
+   <div class="slider__container">
+     <div class="slider__control slider__control_left">
+        <div class="slider__btn--l">
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider__wrapper">
+          <div class="slider__item">
+            <div class="equip__itemblock _anim-items _anim-nohide">
+              <div class="equip__items _anim-show">
+                <div class="equip_svg-item">
+                  <div class="equip_svg-wrapp box">
+                    <div class="equip_svg-logo">
+                      <svg width="70%" height="100px" class="equip_svg-s">
+                        <use xlink:href="/dist/svg/equip.svg#korf"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="equip-tittle">
+                  Korf
+                </div>
+                <div class="equip-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem debitis nesciunt dolor beatae delectus cumque sequi.
+                </div>
+                <div class="equip-btn">
+                  <a href="#" class="equip_a-btn" data-content="btnnew" data-cl="tabs" data-cltitle="Login and Go catalogue">Go catalogue
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="equip__itemblock _anim-items _anim-nohide">
+              <div class="equip__items _anim-show">
+                <div class="equip_svg-item">
+                  <div class="equip_svg-wrapp box">
+                    <div class="equip_svg-logo">
+                      <svg width="70%" height="100px" class="equip_svg-s">
+                        <use xlink:href="/dist/svg/equip.svg#daikin"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="equip-tittle">
+                  Daikin
+                </div>
+                <div class="equip-txt">
+                  Lorem ipsum dolor sit amet, nesciunt dolor beatae delectus cumque sequi accusamus voluptatum, nihil fugiat, consequatur.
+                </div>
+                <div class="equip-btn">
+                  <a href="#" class="equip_a-btn" data-content="btnnew" data-cl="tabs">Go catalogue
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="equip__itemblock _anim-items _anim-nohide">
+              <div class="equip__items _anim-show">
+                <div class="equip_svg-item">
+                  <div class="equip_svg-wrapp box">
+                    <div class="equip_svg-logo">
+                      <svg width="70%" height="100px" class="equip_svg-s">
+                        <use xlink:href="/dist/svg/equip.svg#mitsubishi"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="equip-tittle">
+                  MITSUBISHI ELECTRIC
+                </div>
+                <div class="equip-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing reiciendis.
+                </div>
+                <div class="equip-btn">
+                  <a href="#" class="equip_a-btn" data-content="btnnew" data-cl="tabs">Go catalogue
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="equip__itemblock _anim-items _anim-nohide">
+              <div class="equip__items _anim-show">
+                <div class="equip_svg-item">
+                  <div class="equip_svg-wrapp box">
+                    <div class="equip_svg-logo">
+                      <svg width="70%" height="100px" class="equip_svg-s">
+                        <use xlink:href="/dist/svg/equip.svg#venterra"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="equip-tittle">
+                  Venterra
+                </div>
+                <div class="equip-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt labore nobis corporis reiciendis.
+                </div>
+                <div class="equip-btn">
+                  <a href="#" class="equip_a-btn" data-content="btnnew" data-cl="tabs">Go catalogue
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="equip__itemblock _anim-items _anim-nohide">
+              <div class="equip__items _anim-show">
+                <div class="equip_svg-item">
+                  <div class="equip_svg-wrapp box">
+                    <div class="equip_svg-logo">
+                      <svg width="70%" height="100px" class="equip_svg-s">
+                        <use xlink:href="/dist/svg/equip.svg#lg"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="equip-tittle">
+                  Lg
+                </div>
+                <div class="equip-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt labore nobis corporis reiciendis.
+                </div>
+                <div class="equip-btn">
+                  <a href="#" class="equip_a-btn" data-content="btnnew" data-cl="tabs">Go catalogue
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__points"></div>
+      </div>
+      <div class="slider__control slider__control_right">
+        <div class="slider__btn--r">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    Modernizr.on("webp", function(result) {
+      let webp = document.querySelectorAll(".equip_svg-wrapp.box");
+      if (webp.length > 0) {
+        for (let i = 0; i < webp.length; i++) {
+          if (result) {
+            webp[i].classList.add("webp");
+          } else {
+            webp[i].classList.add("no-webp");
+          }
+        }
+      }
+    });
+  </script>
+  <div class="content d-content">
+    <div class="discounts">
+      <div class="discounts--tittle">
+        Section 6. Customers discounts
+      </div>
+      <div class="discounts--txt">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem debitis nesciunt dolor beatae delectus cumque sequi accusamus voluptatum.
+      </div>
+      <div class="discounts--btn" data-content="btnnew" data-cl="callback" data-cltittle="Send Application" data-clfrom="Send Form Send Application" data-clbtn="Application">
+        SEND APPLICATION
+      </div>
+    </div>
+  </div>
+  <div class="content contact-content">
+    <div class="contact--tittle">
+      Section 7. Who can I contact via the website?
+    </div>
+    <div class="contact">
+      <div class="contact__items">
+        <div class="contact-img">
+          <picture>
+            <source srcset="/dist/images/member1.webp" type="image/webp" />
+            <source srcset="/dist/images/member1.png" type="image/png"/>
+            <img src="/dist/images/member1.png" alt="" class="feat_contact"  />
+          </picture>
+        </div>
+        <div class="contact-name">
+          JON SMITH
+        </div>
+        <div class="contact-prof">
+          Sales manager
+        </div>
+        <div class="contact-phone">
+          <svg width="12px" height="12px">
+            <use xlink:href="/dist/svg/icons.svg#smartphone"></use>
+          </svg>
+         </a><span> +1(111)111-1112</span>
+        </div>
+      </div>
+      <div class="contact__items">
+        <div class="contact-img">
+          <picture>
+            <source srcset="/dist/images/member2.webp" type="image/webp" />
+            <source srcset="/dist/images/member2.png" type="image/png" />
+            <img src="/dist/images/member2.png" alt="" class="feat_contact" />
+          </picture>
+        </div>
+        <div class="contact-name">
+          JON SMITH
+        </div>
+        <div class="contact-prof">
+          Sales manager
+        </div>
+        <div class="contact-phone">
+          <svg width="12px" height="12px">
+            <use xlink:href="/dist/svg/icons.svg#smartphone"></use>
+          </svg>
+         </a><span> +1(111)111-1113</span>
+        </div>
+      </div>
+      <div class="contact__items">
+        <div class="contact-img">
+          <picture>
+            <source srcset="/dist/images/member3.webp" type="image/webp" />
+            <source srcset="/dist/images/member3.png" type="image/png" />
+            <img src="/dist/images/member3.png" alt="" class="feat_contact" />
+          </picture>
+        </div>
+        <div class="contact-name">
+          JON SMITH
+        </div>
+        <div class="contact-prof">
+          Sales manager
+        </div>
+        <div class="contact-phone">
+          <svg width="14px" height="14px">
+            <use xlink:href="/dist/svg/icons.svg#smartphone"></use>
+          </svg>
+         </a><span> +1(111)111-4443</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content partners-c" id="slider-2">
+    <div class="partners--tittle">
+      Section 8. Partners of Company
+    </div>
+    <div class="slider__container">
+      <div class="slider__control slider__control_left">
+        <div class="slider__btn--l">
+          <svg class="slider__btn" width="48px" height="48px">
+            <use xlink:href="/dist/svg/icons.svg#arrowlft"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider__wrapper">
+          <div class="slider__item">
+            <div class="partners__items">
+              <svg width="140px">
+                  <use xlink:href="/dist/svg/partners.svg#systemair"></use>
+                </svg>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="partners__items">
+              <svg width="80px">
+                <use xlink:href="/dist/svg/partners.svg#lg"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="partners__items">
+              <svg width="140px">
+                <use xlink:href="/dist/svg/partners.svg#mitsubishi"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="partners__items">
+              <svg width="100px">
+                <use xlink:href="/dist/svg/partners.svg#wilo"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="partners__items">
+              <svg width="140px">
+                <use xlink:href="/dist/svg/partners.svg#swegon"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__item">
+              <svg width="140px">
+                <use xlink:href="/dist/svg/partners.svg#amalva"></use>
+              </svg>
+          </div>
+          <div class="slider__item">
+            <div class="partners__items">
+              <svg width="140px">
+                <use xlink:href="/dist/svg/partners.svg#korf"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider__control slider__control_right">
+        <div class="slider__btn--r">
+          <svg class="slider__btn" width="48px" height="48px">
+            <use xlink:href="/dist/svg/icons.svg#arrowrght"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="content feedback-content">
+    <div class="feedback--tittle">
+      Section 9. Customer feedback
+    </div>
+    <div class="feedback">
+      <div class="feedback__items">
+        <div class="feedback-img">
+          <picture>
+            <source srcset="/dist/images/member2.webp" type="image/webp" />
+            <source srcset="/dist/images/member2.png" type="image/png"/>
+            <img src="/dist/images/member2.png" alt="" class="feat_feedback"  />
+          </picture>
+        </div>
+        <div class="feedback-name">
+          ANN SMILE
+        </div>
+        <div class="feedback-prof">
+          Company "Comp2"
+        </div>
+        <div class="feedback-descript">
+          <div class="feedback-tittle">
+            Goood Company From Company (edit it).
+          </div>
+          <div class="feedback-txt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem debitis nesciunt dolor beatae delectus cumque equi accusamus voluptatum, nihil fugiat, consequatur ratione iusto! Laboriosam minus sit quia illo sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="feedback__items">
+        <div class="feedback-img">
+          <picture>
+            <source srcset="/dist/images/member1.webp" type="image/webp" />
+            <source srcset="/dist/images/member1.png" type="image/png"/>
+            <img src="/dist/images/member1.png" alt="" class="feat_feedback"  />
+          </picture>
+        </div>
+        <div class="feedback-name">
+          JIMMI JIMMI
+        </div>
+        <div class="feedback-prof">
+          Company "Comp"
+        </div>
+        <div class="feedback-descript">
+          <div class="feedback-tittle">
+            Goood Company From Company Swection 9.
+          </div>
+          <div class="feedback-txt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem debitis nesciunt dolor beatae delectus cumque equi accusamus voluptatum, nihil fugiat, consequatur ratione iusto! Laboriosam minus sit quia illo sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="feedback__items">
+        <div class="feedback-img">
+          <picture>
+            <source srcset="/dist/images/member3.webp" type="image/webp" />
+            <source srcset="/dist/images/member3.png" type="image/png"/>
+            <img src="/dist/images/member3.png" alt="" class="feat_feedback"  />
+          </picture>
+        </div>
+        <div class="feedback-name">
+          JOSEF LOW
+        </div>
+        <div class="feedback-prof">
+          Company 2
+        </div>
+        <div class="feedback-descript">
+          <div class="feedback-tittle">
+            Goood Lorem ipsum dolor Company sit amet.
+          </div>
+          <div class="feedback-txt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem debitis nesciunt dolor beatae delectus cumque equi accusamus voluptatum, nihil fugiat, consequatur ratione iusto! Laboriosam minus sit quia illo sapiente.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content carta-content" id="contacts">
+    <div class="carta--tittle">
+      Section 10. Contacts
+    </div>
+    <div class="carta">
+      <div class="carta__left">
+        <div class="carta-adr">
+          <b>Address:</b> Country or Town and Street
+        </div>
+        <div class="carta-phone">
+          <b>Phone:</b> +1(111) 999 9999
+        </div>
+        <div class="carta-img">
+          <picture>
+            <source srcset="/dist/images/cart.webp" type="image/webp" />
+            <source srcset="/dist/images/cart.jpg" type="image/jpg"/>
+            <img src="/dist/images/cart.jpg" alt="" class="feat_carta"  />
+          </picture>
+        </div>
+      </div>
+      <div class="carta__right">
+        <div class="carta-applicatio">
+          <form id="callback" class="contact-form form-callback">
+            <input type="hidden" name="admin-data" value="Send Form From Bottom">
+            <input type="hidden" name="memail" value="null">
+            <input type="hidden" name="froms" value="bott">
+            <div class="carta-tittle">
+              LEAVE APPLICATION
+            </div>
+            <div class="carta-txt">
+              Leave the request and we will contact you within 20 minutes.
+            </div>
+            <div>
+              <label>
+                <div class="carta-name">
+                  Name:
+                </div>
+                <input type="text" name="nm_tp" class="carta-type" placeholder="Your name...">
+              </label>
+            </div>
+            <div>
+              <label>
+                <div class="carta-call">
+                  Phone:
+                </div>
+                <input type="text" name="ph_tp" class="carta-type" placeholder="Your Phone..." required>
+              </label>
+            </div>
+            <div class="carta-seldiv">
+              <label>
+                <div class="carta-sel">
+                  Select:
+                </div>
+                <select name="mont_tp" class="carta-type">
+                  <option value="Installation">Installation</option>
+                  <option value="Design">Design</option>
+                  <option value="Equipment">Equipment</option>
+                </select>
+              </label>
+            </div>
+            <div class="carta-btn">
+              <a href="#" class="carta_a-btn button-small-send">Order Install
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="container f-width">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <a href="#" class="nav__link">
+          <picture>
+            <source
+              srcset="/dist/images/logotop.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="/dist/images/logotop.png"
+              type="image/png"
+            />
+            <img src="/dist/images/logotop.png" alt="" class="feat_footer" />
+          </picture>
+        </a>
+      </div>
+      <nav class="nav_footer">
+        <a href="#" class="nav__footerlink" data-content="gos" data-cl="features">Main page</a>
+        <a href="#" class="nav__footerlink" data-content="gos" data-cl="works">Company</a>
+        <a href="#" class="nav__footerlink" data-content="gos" data-cl="team" >Section4</a>
+        <a href="#" class="nav__footerlink" data-content="gos" data-cl="slider-1" >Equipment</a>
+        <a href="#" class="nav__footerlink" data-content="gos" data-cl="download" >Contacts</a>
+      </nav>
+      <div class="footer__mob">
+        <div>
+          <a href="#" class="footer__svg" data-content="gos" data-cl="features1">
+            <svg width="14px" height="14px">
+              <use xlink:href="/dist/svg/icons.svg#smartphone"></use>
+            </svg>
+           </a><span class="footer__mob-phone"> +1 (123) 123-4444</span>
+        </div>
+        <div class="footer__mob-requst">
+          <a
+            href="#"
+            class="footer__btn"
+            data-content="btnnew"
+            data-cl="tabs"
+            >Request the call back</a  
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ./ footer -->
+
+
+  <script src="./dist/js/common.js"></script>
+</body>
+
+</html>
