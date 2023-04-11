@@ -1,5 +1,12 @@
-<?php 
+<?php
+/**
+ * Single post template
+ *
+ *
+ * @package ua3dsthm
+*/
 // the_terms( $post->ID, 'location', 'Locations: ', ', ', ' ' );
+
 get_header();
 ?>
 <section class="page-wrap">

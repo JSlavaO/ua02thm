@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+/**
+ * front-page template
+ *
+ *
+ * @package ua3dsthm
+*/
+
+get_header(); ?>
 Page 'front-page.php' 
 <div class="container">
   <section class="page-wrap">

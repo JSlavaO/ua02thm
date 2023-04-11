@@ -3,18 +3,39 @@
  * Theme Functions
  * 
  * @package Ua02thm
- */
+*/
+
+// npm i webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader clean-webpack-plugin css-loader file-loader mini-css-extract-plugin optimize-css-assets-webpack-plugin cssnano style-loader uglifyjs-webpack-plugin cross-env -D
+// optimize-css-assets-webpack-plugin  uglifyjs-webpack-plugin ->!problem
+// npm install --save-dev cross-env
 
 // git rm hello.txt and add to .gitignore
 // git rm screenshot.png debug.log gulpfile.js wp01.ua3ds.com.code-workspace start.bat
 
-
+if ( ! defined ('UA02THM_USE_BUTSTAP') ) {
+  define ('UA02THM_USE_BUTSTAP', true);
+};
+if ( ! defined ('UA02THM_PAGES_BUTSTAP') ) {
+  define ('UA02THM_PAGES_BUTSTAP', 3);
+};
+if ( ! defined ('UA02THM_DIR_PATH') ) {
+  define ('UA02THM_DIR_PATH', untrailingslashit(get_template_directory()));
+};
+if ( ! defined ('UA02THM_DIR_URI') ) {
+  define ('UA02THM_DIR_URI', untrailingslashit(get_template_directory_uri()));
+}; 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
-}
-$year = date( 'Y' );
+};
 define( 'UPLOADS', 'wp-content/uploads' );
+
+require_once(UA02THM_DIR_PATH . '/inc/helpers/autoloader.php');
+function ua02thm_get_instance() {
+ \UA02THMSI_THEME\Inc\Ua02t_Theme::get_instance();
+}
+ua02thm_get_instance();
+
 global $iids;
 global $tst;
 global $cur_user;
@@ -25,19 +46,9 @@ use Carbon_Fields\Field;
 // include_once (__DIR__ . '/inc/ua02thm-recent-posts.php');
 require_once (__DIR__ . '/inc/ua02thm-post-meta.php');
 
-// global $current_user;
-// global $c_user;
-// global $c_email;
-// // $cur_user = _wp_get_current_user();
-// $current_user = wp_get_current_user();
-// $c_user = $current_user->user_login;
-// $c_email = $current_user->user_email;
-// echo 'c__user: '.$c_user;
-// $c_user = json_encode($cur_user->name);
-// $c_email = json_encode($cur_user->user_email);
-// echo 'email:'.$c_email;
-$fromemail = "noreplay@wp.ua3ds.com";
-$toemail = "fromua@yahoo.com";
+// $fromemail = "noreplay@wp.ua3ds.com";
+// $toemail = "fromua@yahoo.com";
+
 // function page_on_front() {
 //     $options = get_option('theme_options');
 //     return $options['page_on_front'];
@@ -51,58 +62,37 @@ $toemail = "fromua@yahoo.com";
 // echo '<pre>';
 // print_r( get_template_directory_uri() );
 // wp_die();
-
-function ua3dsthm_scripts() {
-  // get_template_directory_uri() . '/app/dist/css/main.min.css?dev=' . time(),
-  wp_deregister_script( 'jquery' );
-  wp_enqueue_style(
-	'main.min',
-	get_template_directory_uri() . '/app/dist/css/main.min.css',
-	[],
-	filemtime( get_template_directory() . '/app/dist/css/main.min.css'),
-  'all'
-	);
-	wp_enqueue_script(
-	'modernizrcustom', 
-	get_template_directory_uri() . '/app/dist/js/modernizr-custom.js',
-	null,
-	null
-	);
-	wp_enqueue_script(
-    'commonjs', 
-    get_template_directory_uri() . '/app/dist/js/common.js',
-    [],
-    filemtime( get_template_directory() . '/app/dist/js/common.js'),
-    true
-  );
-  wp_dequeue_style('classic-theme-styles');
-  wp_dequeue_style('global-styles');
-  // wp_dequeue_style('cdp-css-global');
-  // wp_dequeue_style('cdp-css');
-  // wp_dequeue_style('cdp-css-user');
-  // wp_dequeue_style('cdp-tooltips-css');
-  // wp_dequeue_style('cdp-css-select');
-}
-add_action( 'wp_enqueue_scripts', 'ua3dsthm_scripts' );
-remove_action( 'wp_head', 'wp_generator' );
-
-function remove_api () {
+function ua02thm_remove_api () {
+  remove_action( 'wp_head', 'wp_generator', 10 );
   remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
   remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
-}
-add_action( 'after_setup_theme', 'remove_api' );
+};
 
-// .ua3dslog-button {
-//   background-color:#eb5e28;
-//   border:1px;
-//   border-radius:3px;
-//   -webkit-box-shadow:1px 1px 0px 0px #2f2f2f;
-//   -moz-box-shadow:1px 1px 0px 0px #2f2f2f;
-//   box-shadow:1px 1px 0px 0px #2f2f2f;
-//   }
-//   .ua3dslog-button a,  .ua3dslog-button a:hover, .menu-button a:active {
-//   color:#fff !important;
-//   }
+add_action( 'after_setup_theme', 'ua02thm_remove_api' );
+
+function doublee_custom_excerpt_metabox( $post_type ) {
+	if(in_array($post_type, array('post','page'))) {
+		add_meta_box(
+			'excerpt_meta', __( 'Excerpt' ), 'post_excerpt_meta_box', $post_type, 'temp', 'high'
+		);
+	}
+}
+add_action( 'add_meta_boxes', 'doublee_custom_excerpt_metabox' );
+
+function doublee_run_custom_excerpt_meta_box() {
+	# Get the globals:
+	global $post, $wp_meta_boxes;
+
+	# Output the "advanced" meta boxes:
+	do_meta_boxes( get_current_screen(), 'temp', $post );
+}
+add_action( 'edit_form_after_title', 'doublee_run_custom_excerpt_meta_box' );
+
+function doublee_remove_normal_excerpt() {
+	remove_meta_box( 'postexcerpt' , 'post' , 'normal' );
+	remove_meta_box( 'postexcerpt' , 'page' , 'normal' );
+}
+add_action( 'admin_menu' , 'doublee_remove_normal_excerpt' );
 
 
 function flatupp() {
@@ -360,9 +350,7 @@ function se_inspect_styles(){
 // add_action('wp_print_styles', 'se_inspect_styles');
 
 // Theme options
-add_theme_support('menus');
-add_theme_support('post-thumbnails');
-add_theme_support('widgets');
+
 
 add_image_size('blog-large', 800, 600, false);
 add_image_size('blog-small', 300, 200, true);
@@ -459,10 +447,7 @@ function webp_upload_mimes($existing_mimes) {
 }
 add_filter('mime_types', 'webp_upload_mimes');
 
-register_nav_menus( array(
-  'top-menu' => 'Top Menu Location',
-  'mobile-menu' => 'Mobile Menu Location'
-));
+
 
 add_filter( 'locale', function($locale) {
   if ( !is_admin() ) 

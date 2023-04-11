@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+/**
+ * page template
+ *
+ *
+ * @package ua3dsthm
+*/
+
+get_header(); ?>
 Its 'page.php'
 <section class="page-wrap">
 <div class="container">
